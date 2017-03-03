@@ -8,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   roslib
   rospy
-  next_best_view  
+  asr_next_best_view  
 )
 
 ## System dependencies are found with CMake's conventions

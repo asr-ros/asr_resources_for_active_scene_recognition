@@ -20,7 +20,7 @@ import roslib
 import rospy
 from asr_robot_model_services.msg import RobotStateMessage
 from asr_robot_model_services.srv import CalculateCameraPose, GetPose
-from next_best_view.srv import TriggerFrustumVisualization
+from asr_next_best_view.srv import TriggerFrustumVisualization
 
 def get_camera_pose_cpp():
     """

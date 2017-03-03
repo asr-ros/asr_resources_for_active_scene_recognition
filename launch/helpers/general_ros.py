@@ -37,4 +37,4 @@ resources_for_active_scene_recognition_path = rospack.get_path("asr_resources_fo
 world_model_path = rospack.get_path("asr_world_model")
 recognizer_prediction_ism_path = rospack.get_path("recognizer_prediction_ism")
 fake_object_recognition_path = rospack.get_path("fake_object_recognition")
-next_best_view_path = rospack.get_path("next_best_view")
+next_best_view_path = rospack.get_path("asr_next_best_view")

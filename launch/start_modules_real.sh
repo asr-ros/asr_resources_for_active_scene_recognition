@@ -39,7 +39,7 @@ tmux send-keys -t asr:ism.1 'roscd asr_resources_for_active_scene_recognition/sr
 
 #Starts next-best-view calculation and world model.
 tmux new-window -n 'nbv'
-tmux send-keys -t asr:nbv.0 'script -c "roslaunch --wait next_best_view next_best_view_core_real.launch" -f ~/log/nbv.log' C-m
+tmux send-keys -t asr:nbv.0 'script -c "roslaunch --wait asr_next_best_view next_best_view_core_real.launch" -f ~/log/nbv.log' C-m
 tmux split-window -t asr:nbv
 tmux send-keys -t asr:nbv.1 'script -c "roslaunch --wait asr_world_model world_model.launch" -f ~/log/world_model.log' C-m
 

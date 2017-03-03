@@ -1,7 +1,7 @@
 #from control import *
 import csv
 import rospy
-from next_best_view.srv import *
+from asr_next_best_view.srv import *
 import imp
 from configuration import *
 import pickle

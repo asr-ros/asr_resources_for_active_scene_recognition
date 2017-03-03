@@ -11,12 +11,12 @@
   <build_depend>roscpp</build_depend>
   <build_depend>roslib</build_depend>
   <build_depend>rospy</build_depend>
-  <build_depend>next_best_view</build_depend>
+  <build_depend>asr_next_best_view</build_depend>
 
   <run_depend>roscpp</run_depend>
   <run_depend>roslib</run_depend>
   <run_depend>rospy</run_depend>
-  <run_depend>next_best_view</run_depend>
+  <run_depend>asr_next_best_view</run_depend>
   <run_depend>asr_robot_model_services</run_depend>
 
 
