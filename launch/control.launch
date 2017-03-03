@@ -1,0 +1,3 @@
+<launch>
+    <node name="control" pkg="asr_resources_for_active_scene_recognition" type="control.sh" />
+</launch>

@@ -1,0 +1,4 @@
+<!--Launch file to accelerate RViz launching by automatically loading scene exploration configuration.-->
+<launch>
+	<node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find asr_resources_for_active_scene_recognition)/rviz_configurations/scene_exploration.rviz"/>
+</launch>

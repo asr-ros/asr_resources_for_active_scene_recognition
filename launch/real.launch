@@ -1,0 +1,3 @@
+<launch>
+    <node name="real_tmux" pkg="asr_resources_for_active_scene_recognition" type="start_modules_real.sh" />
+</launch>

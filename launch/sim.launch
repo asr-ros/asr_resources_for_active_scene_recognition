@@ -1,0 +1,3 @@
+<launch>
+    <node name="sim_tmux" pkg="asr_resources_for_active_scene_recognition" type="start_modules_sim.sh" />
+</launch>

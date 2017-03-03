@@ -1,0 +1,16 @@
+.gitignore 
+.directory
+ptu_driver.*
+*.files
+*.creator
+*.includes
+*.creator.user
+ptu_controller.config
+*.autosave
+*~
+*__init__.py
+html
+latex
+docs
+src/recognition_for_grasping/cfg/*
+cfg/cpp

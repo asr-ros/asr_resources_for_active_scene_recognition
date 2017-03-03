@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>asr_resources_for_active_scene_recognition</name>
+  <version>1.0.0</version>
+  <description>This package contains various helpers and resources for the scene-recognition applications</description>
+  <author>Allgeyer Tobias, Aumann Florian, Borella Jocelyn, Karrenbauer Oliver, Marek Felix, Meißner Pascal, Stroh Daniel, Trautmann Jeremias</author>
+  <maintainer email="asr-ros@lists.kit.edu">Meißner Pascal</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>next_best_view</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>next_best_view</run_depend>
+  <run_depend>asr_robot_model_services</run_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
