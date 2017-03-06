@@ -198,7 +198,7 @@ positions = [
 # setConfig(cfg_story1)
 # configuration for story1
 # world_description is a setting in world_model/launch launch files
-# database contains the scene and is defined in recognizer_prediction_ism/rsc/scene_recognition.yaml
+# database contains the scene and is defined in asr_recognizer_prediction_ism/rsc/scene_recognition.yaml
 # fake_recognizer_objs contains detectable objects and is defiend in fake_object_recognition/config/params.yaml
 cfg_story1_missing_knife = {
   "world_description" : "$(find asr_world_model)/rsc/world_descriptions/world_description.yaml",

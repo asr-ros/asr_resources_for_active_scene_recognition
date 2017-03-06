@@ -30,7 +30,7 @@ mkdir -p ${logFolder}
 
 #Starts scene recognition, pose prediction and provides a pane for interfaces with object localization simulation.
 tmux new-window -n 'ism' 
-tmux send-keys -t asr:ism 'script -c "roslaunch --wait recognizer_prediction_ism rp_ism_node.launch" -f '"${logFolder}"'/ism.log' C-m
+tmux send-keys -t asr:ism 'script -c "roslaunch --wait asr_recognizer_prediction_ism rp_ism_node.launch" -f '"${logFolder}"'/ism.log' C-m
 tmux split-window -t asr:ism
 tmux send-keys -t asr:ism.1 'echo Perform service calls to fake_object_recognition from here.' C-m
 

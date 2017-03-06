@@ -33,7 +33,7 @@ sh helpers/start_modules_robot.sh
 
 #Starts scene recognition, pose prediction and interface for service calls to object localizers
 tmux new-window -n 'ism' 
-tmux send-keys -t asr:ism.0 'script -c "roslaunch --wait recognizer_prediction_ism rp_ism_node.launch" -f ~/log/ism.log' C-m
+tmux send-keys -t asr:ism.0 'script -c "roslaunch --wait asr_recognizer_prediction_ism rp_ism_node.launch" -f ~/log/ism.log' C-m
 tmux split-window -t asr:ism
 tmux send-keys -t asr:ism.1 'roscd asr_resources_for_active_scene_recognition/src/recognition_manual_manager/;python manager.py' C-m
 
