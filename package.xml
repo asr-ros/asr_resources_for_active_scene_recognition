@@ -2,7 +2,7 @@
 <package>
   <name>asr_resources_for_active_scene_recognition</name>
   <version>1.0.0</version>
-  <description>This package contains various helpers and resources for the scene-recognition applications</description>
+  <description>This package contains various helpers and resources for the scene-recognition applications. It contains the launch files to start the simulation and the real system, the standard rviz-configuration file and databases from recorded scenes. It also contains the constellation transformation tool, the recognition manual manager and a script to visualize the current camera frustum.</description>
   <author>Allgeyer Tobias, Aumann Florian, Borella Jocelyn, Karrenbauer Oliver, Marek Felix, Meißner Pascal, Stroh Daniel, Trautmann Jeremias</author>
   <maintainer email="asr-ros@lists.kit.edu">Meißner Pascal</maintainer>
   <license>BSD</license>
