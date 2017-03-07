@@ -21,7 +21,7 @@ import recognition_for_grasping.srv
 from pbd_msgs.msg import PbdObject
 from world_model.srv import PushFoundObject, PushFoundObjectList
 import asr_aruco_marker_recognition.srv 
-import fake_object_recognition.srv
+import asr_fake_object_recognition.srv
 from world_model.srv import GetRecognizerName
 import asr_descriptor_surface_based_recognition.srv 
 

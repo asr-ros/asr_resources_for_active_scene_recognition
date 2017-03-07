@@ -90,7 +90,7 @@ def tmuxRestart():
 
 def terminateAllModules():
   # since tmuxkill does not always terminate everything
-  processNames = ["gzserver", "roslaunch", "asr_world_model", "rosout", "visualization", "rp_ism_node", "roscore", "move_base", "asr_mild_base_fake_driving", "state_publisher", "grid_action_server", "asr_object_database", "fake_object_recognition", "asr_flir_ptu_driver", "PTUController", "map_server", "asr_next_best_view", "next_best_view_robot_model", "rosbag", "record", "rviz", "static_transform_publisher", "rosmaster", "gdb"]
+  processNames = ["gzserver", "roslaunch", "asr_world_model", "rosout", "visualization", "rp_ism_node", "roscore", "move_base", "asr_mild_base_fake_driving", "state_publisher", "grid_action_server", "asr_object_database", "asr_fake_object_recognition", "asr_flir_ptu_driver", "PTUController", "map_server", "asr_next_best_view", "next_best_view_robot_model", "rosbag", "record", "rviz", "static_transform_publisher", "rosmaster", "gdb"]
   for proc in psutil.process_iter():
     if proc.name in processNames or ("python" in proc.name and proc.pid != os.getpid()):
       print("terminating " + proc.name)

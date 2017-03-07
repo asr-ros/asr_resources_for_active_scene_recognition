@@ -32,7 +32,7 @@ mkdir -p ${logFolder}
 tmux new-window -n 'ism' 
 tmux send-keys -t asr:ism 'script -c "roslaunch --wait asr_recognizer_prediction_ism rp_ism_node.launch" -f '"${logFolder}"'/ism.log' C-m
 tmux split-window -t asr:ism
-tmux send-keys -t asr:ism.1 'echo Perform service calls to fake_object_recognition from here.' C-m
+tmux send-keys -t asr:ism.1 'echo Perform service calls to asr_fake_object_recognition from here.' C-m
 
 #Starts next-best-view calculation and world model.
 tmux new-window -n 'nbv'

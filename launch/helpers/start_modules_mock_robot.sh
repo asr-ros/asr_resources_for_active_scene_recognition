@@ -43,4 +43,4 @@ tmux send-keys -t asr:ptu_mock.4 'roscd asr_resources_for_active_scene_recogniti
 
 #Starts object localization simulation for all real recognizers we have on MILD.
 tmux new-window -n 'fake_recognizer'
-tmux send-keys -t asr:fake_recognizer 'roslaunch --wait fake_object_recognition fake_object_recognition.launch' C-m
+tmux send-keys -t asr:fake_recognizer 'roslaunch --wait asr_fake_object_recognition fake_object_recognition.launch' C-m

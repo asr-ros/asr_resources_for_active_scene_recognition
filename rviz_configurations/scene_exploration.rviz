@@ -315,7 +315,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /fake_object_recognition/constellation_visualization
+      Marker Topic: /asr_fake_object_recognition/constellation_visualization
       Name: Fake Recognizer Object Constellation
       Namespaces:
         Available objects: true
