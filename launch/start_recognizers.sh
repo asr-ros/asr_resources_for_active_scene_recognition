@@ -34,7 +34,7 @@ tmux send-keys  -t asr:descriptor_surface_based_recognition 'roslaunch --wait as
 
 #Localization of markers, based on ArUco lib
 tmux new-window -n 'aruco_marker_recognition' 
-tmux send-keys -t asr:aruco_marker_recognition 'roslaunch --wait aruco_marker_recognition aruco_marker_recognition_core.launch' C-m
+tmux send-keys -t asr:aruco_marker_recognition 'roslaunch --wait asr_aruco_marker_recognition aruco_marker_recognition_core.launch' C-m
 
 #Object database that contains models, trained for object localization and models for visualization.
 tmux new-window -n 'object_database'
