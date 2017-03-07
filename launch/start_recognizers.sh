@@ -30,7 +30,7 @@ tmux send-keys -t asr:recognition_for_grasping 'roslaunch --wait recognition_for
 
 #New object localization, based on Halcon lib.
 tmux new-window -n 'descriptor_surface_based_recognition'
-tmux send-keys  -t asr:descriptor_surface_based_recognition 'roslaunch --wait descriptor_surface_based_recognition descriptor_surface_based_recognition_core.launch' C-m
+tmux send-keys  -t asr:descriptor_surface_based_recognition 'roslaunch --wait asr_descriptor_surface_based_recognition descriptor_surface_based_recognition_core.launch' C-m
 
 #Localization of markers, based on ArUco lib
 tmux new-window -n 'aruco_marker_recognition' 

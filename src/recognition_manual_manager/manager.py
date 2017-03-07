@@ -23,7 +23,7 @@ from world_model.srv import PushFoundObject, PushFoundObjectList
 import aruco_marker_recognition.srv 
 import fake_object_recognition.srv
 from world_model.srv import GetRecognizerName
-import descriptor_surface_based_recognition.srv 
+import asr_descriptor_surface_based_recognition.srv 
 
 
 class ObjectDetectorsManager:
@@ -34,11 +34,11 @@ class ObjectDetectorsManager:
     def start_recognizers_descriptor(self, search_objects):
         try:
             rospy.wait_for_service(
-                    '/descriptor_surface_based_recognition/get_recognizer',
+                    '/asr_descriptor_surface_based_recognition/get_recognizer',
                     timeout=3)
             descriptor_recognizer = rospy.ServiceProxy(
-                    '/descriptor_surface_based_recognition/get_recognizer',
-                    descriptor_surface_based_recognition.srv.GetRecognizer)
+                    '/asr_descriptor_surface_based_recognition/get_recognizer',
+                    asr_descriptor_surface_based_recognition.srv.GetRecognizer)
         except (rospy.exceptions.ROSException, rospy.ServiceException) as e:
                 rospy.logwarn("Service error with descriptor recognizer")
                 return 'aborted'
@@ -86,8 +86,8 @@ class ObjectDetectorsManager:
         release_descriptor_recognizer = None
         try:
             release_descriptor_recognizer = rospy.ServiceProxy(
-                    '/descriptor_surface_based_recognition/release_recognizer',
-                    descriptor_surface_based_recognition.srv.ReleaseRecognizer)
+                    '/asr_descriptor_surface_based_recognition/release_recognizer',
+                    asr_descriptor_surface_based_recognition.srv.ReleaseRecognizer)
         except rospy.ServiceException, e:
             rospy.logwarn("Error calling the release recognizer services for descriptor recognition.")
             return 'aborted'
@@ -99,8 +99,8 @@ class ObjectDetectorsManager:
         clear_all_descriptor_recognizers = None
         try:
             clear_all_descriptor_recognizers = rospy.ServiceProxy(
-                    '/descriptor_surface_based_recognition/clear_all_recognizers',
-                    descriptor_surface_based_recognition.srv.ClearAllRecognizers)
+                    '/asr_descriptor_surface_based_recognition/clear_all_recognizers',
+                    asr_descriptor_surface_based_recognition.srv.ClearAllRecognizers)
         except rospy.ServiceException, e:
             rospy.logwarn("Error calling the clear all recognizers service for descriptor recognition.")
             return 'aborted'
