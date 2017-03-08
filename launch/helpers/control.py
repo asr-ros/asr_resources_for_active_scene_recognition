@@ -33,7 +33,7 @@ from general_ros import *
 from configuration import *
 from move import *
 from personal_stuff import *
-from world_model.srv import GetMissingObjectList
+from asr_world_model.srv import GetMissingObjectList
 from asr_msgs.msg import AsrObject
 
 # tab completion
