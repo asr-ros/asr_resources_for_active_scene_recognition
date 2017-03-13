@@ -33,6 +33,6 @@ sh helpers/start_modules_robot.sh
 
 #Starts scene recorder and interface for service calls to object localizers
 tmux new-window -n 'recorder'
-tmux send-keys -t asr:recorder.0 'roslaunch --wait ism recorder.launch' C-m
+tmux send-keys -t asr:recorder.0 'roslaunch --wait asr_ism recorder.launch' C-m
 tmux split-window -t asr:recorder
 tmux send-keys -t asr:recorder.1 'roscd asr_resources_for_active_scene_recognition/src/recognition_manual_manager/;python manager.py' C-m 
