@@ -18,12 +18,6 @@
 
 # TODO new-window -d to not switch to new window, send-keys -t target-pane, split-window -t target-pane
 # TODO rewrite as python script? because better/easier understandable api
-# check for ros
-source ~/.bashrc 
-if ! hash roscd 2> /dev/null; then 
-  echo "source ros in your bashrc"
-  exit 1
-fi
 
 #Start tmux session if not already existing.
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
