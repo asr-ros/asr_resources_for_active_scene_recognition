@@ -137,7 +137,7 @@ def getMarkerArrow(point,k,n_s,r,g,b,orientation):
 
 if __name__ == "__main__":
 
-    rospy.init_node('tranformation_tool')
+    rospy.init_node('transformation_tool')
     while not rospy.is_shutdown():
         angle_x = 0*math.pi/180
         angle_y = 0*math.pi/180
@@ -175,7 +175,7 @@ if __name__ == "__main__":
         new_constellation = []
         id = 0
 
-        publisher = rospy.Publisher("tranformation_tool", Marker, queue_size=10)
+        publisher = rospy.Publisher("transformation_tool", Marker, queue_size=10)
 
         for poses in point_constellation:
             marker = Marker()
