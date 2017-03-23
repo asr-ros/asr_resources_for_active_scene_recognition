@@ -31,7 +31,6 @@ from visualization_msgs.msg import Marker, MarkerArray
 
 
 def multiply_matrix(matrix_1,matrix_2):
-
     result_matrix = []
     if len(matrix_1[0]) != len(matrix_2):
         print "Invalid Matrix"
@@ -139,12 +138,14 @@ if __name__ == "__main__":
 
     rospy.init_node('transformation_tool')
     while not rospy.is_shutdown():
+        # transformation
         angle_x = 0*math.pi/180
         angle_y = 0*math.pi/180
         angle_z = -150*math.pi/180
 
         translation = [-0.2,-0.6,0]
 
+        # constellation
         point_constellation = []
         pose1 = Pose()
         pose1.position = Point(*[-0.0831926,0.787348,0.705691])
@@ -177,6 +178,7 @@ if __name__ == "__main__":
 
         publisher = rospy.Publisher("transformation_tool", Marker, queue_size=10)
 
+        # publish orig
         for poses in point_constellation:
             marker = Marker()
             marker = getMeshMarker(poses[0].position,id,'transformation_orig',poses[0].orientation,poses[1])
@@ -187,10 +189,8 @@ if __name__ == "__main__":
             id += 1
             publisher.publish(marker)
 
-
+        # transform constellation
         for poses in point_constellation:
-
-
             base_vec = [poses[0].position.x,poses[0].position.y,poses[0].position.z]
             new_base_vec = matrix_vector_mult(get_rotation_matrix(angle_x, angle_y, angle_z),base_vec)
             new_position = Point(*[new_base_vec[0],new_base_vec[1],new_base_vec[2]])
@@ -217,6 +217,7 @@ if __name__ == "__main__":
             object = [new_pose,poses[1]]
             new_constellation.append(object)
 
+        # publish new/transformed constellation
         for poses in new_constellation:
             marker2 = Marker()
             marker2 = getMeshMarker(poses[0].position,id,'transformation_new',poses[0].orientation,poses[1])
