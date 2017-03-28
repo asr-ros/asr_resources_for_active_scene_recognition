@@ -178,12 +178,6 @@ def getTotalDistance(nbvs):
     sum += np.linalg.norm(nbvNPPos[i] - nbvNPPos[i+1])
   return sum
 
-def getRating(nbv):
-  ratingNormalization = rospy.get_param("/nbv/mOmegaUtility") * rospy.get_param("/nbv/mOmegaPan") * \
-    rospy.get_param("/nbv/mOmegaTilt") * rospy.get_param("/nbv/mOmegaRot") * \
-    rospy.get_param("/nbv/mOmegaBase") * rospy.get_param("/nbv/mOmegaRecognizer")
-  return (nbv["utility"] + nbv["inverse_costs"]) / ratingNormalization
-
 def rateViewport(pose):
   if type(pose) is not list:
     pose = [pose]
