@@ -22,6 +22,8 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
   tmux send-keys 'roscd asr_resources_for_active_scene_recognition/launch/; ./start_modules_real.sh' C-m
   tmux attach
   exit 1
+else
+  tmux rename-session asr
 fi
 
 #So you know where roscore actually runs...

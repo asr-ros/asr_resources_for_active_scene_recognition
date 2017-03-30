@@ -62,8 +62,8 @@ def startRecognition(recognizers = [], waitTime = 2):
   if type(recognizers) is not list:
     recognizers = [recognizers]
   if len(recognizers) == 0:
-    rospy.wait_for_service("/env/world_model/get_missing_object_list", timeout=5)
-    get_missing_object_list = rospy.ServiceProxy("/env/world_model/get_missing_object_list", GetMissingObjectList)
+    rospy.wait_for_service("/env/asr_world_model/get_missing_object_list", timeout=5)
+    get_missing_object_list = rospy.ServiceProxy("/env/asr_world_model/get_missing_object_list", GetMissingObjectList)
     missing_pbd_typeAndId = get_missing_object_list().missingObjects
     print(missing_pbd_typeAndId)
     for obj in missing_pbd_typeAndId:

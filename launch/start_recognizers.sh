@@ -22,6 +22,8 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
   tmux send-keys 'roscd resources_for_active_scene_recognition/launch/; ./start_recognizers.sh' C-m
   tmux attach
   exit 1
+else
+  tmux rename-session asr
 fi
 
 #Object localization (segmentable and textured) from Pedram Azad.
