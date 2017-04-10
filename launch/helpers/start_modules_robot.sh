@@ -25,7 +25,7 @@ tmux send-keys -t asr:move.1 'roslaunch --wait asr_mild_navigation navigation.la
 
 #Basic wrapper for ptu driver.
 tmux new-window -n 'ptu'
-tmux send-keys -t asr:ptu.0 'roslaunch --wait ptu_driver ptu_left.launch' C-m 
+tmux send-keys -t asr:ptu.0 'roslaunch --wait asr_flir_ptu_driver ptu_left.launch' C-m 
 #Action server for interfacing with ptu in state_machine.
 tmux split-window -h -t asr:ptu
 tmux send-keys -t asr:ptu.1 'sleep 40;roslaunch --wait asr_flir_ptu_controller ptu_controller.launch' C-m
