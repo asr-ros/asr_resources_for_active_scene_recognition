@@ -16,7 +16,7 @@ import copy
 import math
 import __builtin__
 
-state_acquisition = imp.load_source("*", scene_exploration_path + "/src/states/state_acquisition.py")
+state_acquisition = imp.load_source("*", scene_exploration_path + "/src/common/state_acquisition.py")
 nbvSettingsFilePath = next_best_view_path + "/rsc/next_best_view_settings_sim.yaml"
 
 def restartAndWaitForNBV():

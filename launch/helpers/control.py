@@ -44,7 +44,7 @@ waitForAllModules()
 rospy.init_node("general_configuration", anonymous = True)
 
 # import stuff from state machine
-ObjectDetectorsManager = imp.load_source("ObjectDetectorsManager", scene_exploration_path + "/src/states/object_detectors_manager.py").ObjectDetectorsManager()
+ObjectDetectorsManager = imp.load_source("ObjectDetectorsManager", scene_exploration_path + "/src/common/object_detectors_manager.py").ObjectDetectorsManager()
 
 # obj detection
 global detectedObjects
@@ -121,7 +121,7 @@ def startSM():
   selectWindow("state_machine")
   while "indirect_search" not in getLastLinesFrom(getTmuxOut("state_machine", 0), -2):
     time.sleep(1)
-  subprocess.call("tmux send-keys C-m", shell=True)
+  curPane.send_keys("", enter=True)
 
 def getSMResultFromFileContent(smLog):
   result = re.findall(".*State machine terminating '.*(?:SEARCH|SCENE_RECOGNITION).*':'(.*)':'.*", smLog)
