@@ -1,0 +1,1 @@
+# asr_resources_for_active_scene_recognition
