@@ -30,10 +30,8 @@
   <run_depend>asr_mild_navigation</run_depend>
   <run_depend>mild_base_launch_files</run_depend>
   <run_depend>asr_state_machine</run_depend>
-  <run_depend>asr_descriptor_surface_based_recognition</run_depend>
   <run_depend>asr_aruco_marker_recognition</run_depend>
   <run_depend>asr_fake_object_recognition</run_depend>
-  <run_depend>recognition_for_grasping</run_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
