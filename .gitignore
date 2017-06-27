@@ -1,16 +1,50 @@
-.gitignore 
+# General
 .directory
-ptu_driver.*
-*.files
-*.creator
-*.includes
-*.creator.user
-ptu_controller.config
+.deps
+.libs
+*.pyc
+*.pcd
+*.cfgc
 *.autosave
 *~
+*.svn
+*.swp
 *__init__.py
-html
-latex
-docs
-src/recognition_for_grasping/cfg/*
-cfg/cpp
+*.o
+*.la
+*.lo
+*.kdev[0-9]
+msg_gen/
+srv_gen/
+cfg/cpp/
+
+# Build directories
+build/
+_build*
+
+# Visual Studio
+*.opensdf
+*.sdf
+*.suo
+
+# KDevelop
+*.kate-swp
+*.kdev4
+
+# Qt Creator
+*.creator*
+*.files
+*.includes
+*.user
+qtcreator-*
+
+# Eclipse
+.project
+.cproject
+
+# Emacs
+.#*
+
+# Ignore generated docs
+docs/
+*.wikidoc
