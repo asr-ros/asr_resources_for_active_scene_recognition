@@ -16,9 +16,9 @@
 # read http://unix.stackexchange.com/questions/17116/prevent-pane-window-from-closing-when-command-completes-tmux
 #Initializes interfaces to simulations of robot navigation, pan-tilt unit and object localization.
 
-sleep 5
+#sleep 5
 # wait for gazebo
-# while [[ ! $(rosservice list | grep gaz) ]]; do sleep 1; done;
+while [[ ! $(rosservice list | grep gaz) ]]; do sleep 1; done;
 # while [[ ! $(xwininfo -root -all | grep rviz) ]]; do sleep 1; done;
 
 #Start ROS navigation stack for simulating MILD robot.
