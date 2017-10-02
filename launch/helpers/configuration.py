@@ -65,7 +65,7 @@ def isLogFolder(folder):
 def setConfig(cfg, restart = True):
   writeWorldLaunchFile(world_model_path + "/launch/world_model.launch", cfg)
   writeWorldLaunchFile(world_model_path + "/launch/whole_test_system.launch", cfg)
-  writeDatabase(recognizer_prediction_ism_path + "/launch/helpers/scene_recognition.yaml", cfg)
+  writeDatabase(recognizer_prediction_ism_path + "/param/scene_recognition.yaml", cfg)
   writeFakeRecognizer(fake_object_recognition_path + "/config/params.yaml", cfg)
   if restart:
     print("restarting...")
