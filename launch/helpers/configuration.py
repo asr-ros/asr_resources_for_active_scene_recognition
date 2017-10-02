@@ -66,7 +66,7 @@ def setConfig(cfg, restart = True):
   writeWorldLaunchFile(world_model_path + "/launch/world_model.launch", cfg)
   writeWorldLaunchFile(world_model_path + "/launch/whole_test_system.launch", cfg)
   writeDatabase(recognizer_prediction_ism_path + "/param/scene_recognition.yaml", cfg)
-  writeFakeRecognizer(fake_object_recognition_path + "/config/params.yaml", cfg)
+  writeFakeRecognizer(fake_object_recognition_path + "/param/params.yaml", cfg)
   if restart:
     print("restarting...")
     restartConfigPanes()
@@ -199,7 +199,7 @@ positions = [
 # configuration for story1
 # world_description is a setting in world_model/launch launch files
 # database contains the scene and is defined in asr_recognizer_prediction_ism/rsc/scene_recognition.yaml
-# fake_recognizer_objs contains detectable objects and is defiend in asr_fake_object_recognition/config/params.yaml
+# fake_recognizer_objs contains detectable objects and is defiend in asr_fake_object_recognition/param/params.yaml
 cfg_story1_missing_knife = {
   "world_description" : "$(find asr_world_model)/rsc/world_descriptions/world_description.yaml",
   "database" : resources_for_active_scene_recognition_path + "/scene_recordings/story_1.sqlite",
@@ -272,7 +272,7 @@ def restartConfigPanes():
   restartPanes(configPanes)
 
 def getCurrentConfig():
-  dataMap = getYaml(fake_object_recognition_path + "/config/params.yaml")
+  dataMap = getYaml(fake_object_recognition_path + "/param/params.yaml")
   for cfg in cfgs:
     if cfg["fake_recognizer_objs"] == dataMap["config_file_path"]:
       return cfg
