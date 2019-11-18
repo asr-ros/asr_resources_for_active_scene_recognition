@@ -1,1 +1,2 @@
 # asr_resources_for_active_scene_recognition
+documentation: http://wiki.ros.org/asr_resources_for_active_scene_recognition
